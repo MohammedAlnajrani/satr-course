@@ -1,9 +1,4 @@
-# Phonedir = {}
-# Phonedir[("Mohammed")] = 111111111111
-# Phonedir[("Amal")] = 222222222222222
-
-# name=input("Enter name: ")
-# print (Phonedir[(name)])
+print("===Phone Dictionary===")
 
 Phonedir1 = {'name': 'Mohammed', 'phone': 1111111111}
 Phonedir2 = {'name': 'Amal', 'phone': 2222222222}
