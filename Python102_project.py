@@ -4,9 +4,14 @@ import datetime
 
 
 theday=[]
+namelist=[]
+DOBlist=[]
 i=0
+cc=0
+namecoun=0
+sec_key_cc=1
 while True:
-    select=input("whice to continue? (y) (n): ")
+    select=input("whice to continue? (y) (n): \n")
     
     if select.lower()=="y":
         i=i+1 
@@ -28,10 +33,36 @@ while True:
 
         personInfo={'names':name, 'dateOfBirt':calAge(DOB)}
 
-        personInfo [name] = calAge(DOB)
+        #personInfo [name] = calAge(DOB)
 
         theday.append(DOB.strftime("%A"))
-    
+
+
+        
+        #first_key = list(personInfo)[0]
+        first_val = list(personInfo.values())[0]
+
+        #sec_key = list(personInfo)[1]
+        sec_val = list(personInfo.values())[1]
+
+        namelist.append(first_val)
+        DOBlist.append(sec_val)
+        
+        
+
+        print(personInfo)
+        perdob=print(namelist[cc],"is",DOBlist[cc],"years old and she/he was born on",theday[cc])
+        
+        #for check
+        # print(namelist)
+        # print(DOBlist)
+        
+
+
+        cc=cc+1
+        
+       
+
 
     
         
@@ -40,23 +71,49 @@ while True:
         # #print("your age is:",calAge(DOB),"years")
         # print(personInfo['names'],"is",calAge(DOB),"years old and she/he was born on",DOB.strftime("%A"))
     elif select.lower()=="n":
-        print(i)
-        
-        counter=0
-        if  i > counter:
-            first_key = list(personInfo)[counter]
-            first_val = list(personInfo.values())[counter]
+        tempage=DOBlist[0]
+        tempname=namelist[0]
 
-            sec_key = list(personInfo)[counter+1]
-            sec_val = list(personInfo.values())[counter+1]
+        counter=0
+
+
+        while  counter < cc:
+
+            
+            # first_key = list(personInfo)[counter]
+            # first_val = list(personInfo.values())[counter]
+
+            # sec_key = list(personInfo)[counter+1]
+            # sec_val = list(personInfo.values())[counter+1]
 
         
             #print(first_val,"is",sec_val,"years old and she/he was born on",DOB.strftime("%A"))
-            print(first_val,"is",sec_val,"years old and she/he was born on",theday[counter])
-            print(counter)
+
+            print(namelist[counter],"is",DOBlist[counter],"years old and she/he was born on",theday[counter],"\n")
+            
+            if DOBlist[counter] > tempage:
+                tempage==DOBlist[counter]
+                tempname=namelist[counter]
 
             counter=counter+1
-        break 
+
+
+            
+            
+            
+
+
+            # print(first_val,"is",sec_val,"years old and she/he was born on",theday[counter])
+            # print(counter)
+
+            
+        
+        Elder = tempname
+
+        print("The Elder one is :", Elder,"\n")   
+        print("Total people is ", counter)
+
+        break
     else:
         print("invalid input...type (y) to Continue OR (n) to Quit: \n")
     
