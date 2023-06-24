@@ -91,6 +91,8 @@ while True:
 
             print(namelist[counter],"is",DOBlist[counter],"years old and she/he was born on",theday[counter],"\n")
             
+
+            # We can use filter function 
             if DOBlist[counter] > tempage:
                 tempage==DOBlist[counter]
                 tempname=namelist[counter]
@@ -100,11 +102,6 @@ while True:
 
             
             
-            
-
-
-            # print(first_val,"is",sec_val,"years old and she/he was born on",theday[counter])
-            # print(counter)
 
             
         
